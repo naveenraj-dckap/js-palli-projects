@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JS Projects</title>
+
+    <style>
+        .container {
+            margin-left: 43%;
+            margin-top: 10%;
+        }
+        .button {
+            margin-left: 15px;
+            padding: 5px 5px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1 id="t">Todo List</h1>
+        <label>
+            <input id="todo" type="text" name="todo" placeholder="Add Todo">
+        </label>
+        <button type="button" id="add">Add to List</button>
+        <ul id="list">
+
+        </ul>
+<!--        <div class="buttons">-->
+<!--            <button id="ascending" class="button">Ascending</button>-->
+<!--            <button id="descending" class="button">Descending</button>-->
+<!--            <button id="reset" class="button">reset</button>-->
+<!--        </div>-->
+    </div>
+
+
+
+<!--    <script src="callback.js"></script>-->
+    <script src="ascDes.js"></script>
+    <script>
+        let list = []
+
+
+        document.getElementById("add").addEventListener('mouseup', () => {
+            let value = document.getElementById("todo").value
+
+            if(value === "") alert("Add todo")
+            else {
+                list.push(value)
+                ascending(list)
+            }
+        })
+        createList(list)
+    </script>
+</body>
+</html>
